@@ -42,45 +42,17 @@
                 text-indent: 65px;
             }
             
-
-	
-			
-			/*ul {*/
-  	/*			list-style-type: none;*/
-  	/*			margin: 0;*/
-  	/*			padding: 0;*/
-  	/*			overflow: hidden;*/
-			/*	border: 1px solid #e7e7e7;*/
-			/*	background-color: #f3f3f3;*/
-			/*}*/
-			/*li {*/
-			/*  float: left;*/
-			/*  overflow: hidden;*/
-			/*}*/
-			/*li a {*/
-			/*  display: block;*/
-			/*  color: #666;*/
-			/*  text-align: center;*/
-			/*  padding: 14px 16px;*/
-			/*  text-decoration: none;*/
-			/*}*/
-			/*li a:hover:not(.active) {*/
-			/*  background-color: #ddd;*/
-			/*}*/
-			/*li a.active {*/
-			/*  color: white;*/
-			/*  background-color: #2218DC;*/
-			/*}*/
 			
 			#navbar {
               overflow: hidden;
-              background-color: #333;
+              background-color: #f3f3f3;
+              border: 1px solid #e7e7e7;
             }
             
             #navbar a {
               float: left;
               display: block;
-              color: #f2f2f2;
+              color: #666;
               text-align: center;
               padding: 14px 16px;
               text-decoration: none;
@@ -93,7 +65,7 @@
             }
             
             #navbar a.active {
-              background-color: #4CAF50;
+              background-color: #2218DC;
               color: white;
             }
 			
@@ -134,20 +106,6 @@
 <STYLE>A {text-decoration: none;} </STYLE>
 <body>
     
-    <script>
-    window.onscroll = function() {myFunction()};
-    
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
-    
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
-</script>
     
     
     <a href="http://research.baidu.com/">
@@ -157,20 +115,6 @@
       			src="https://www.aistats.org/aistats2016/image/baidu_research_logo_rgb.png" style="margin:20px 20px"/>
 	</div></a>
 
-	<!--<div id='navbar'> -->
-	    
- <!--   	<ul>-->
- <!--   	  <li><a class="link active" href="#welcome">Welcome</a></li>-->
- <!--   	  <li><a class="link" href="#rationale" >Rationale</a></li>-->
- <!--   	  <li><a class="link"  href="#outline">Outline</a></li>-->
- <!--   	  <li><a class="link"  href="#tutors">Tutors</a></li>-->
-
- <!--   	  <li><a class="link"  href="#github">GitHub</a></li>-->
- <!--   	  <li><a class="link" href="#info">Tutorial Info</a></li>-->
- <!--   	  <li><a class="link" href="#contact">Contact</a></li>-->
-    	  
- <!--   	</ul>-->
-	<!--</div>-->
 	
 	<div id='navbar'> 
 	    
@@ -470,6 +414,23 @@ for (var i = 0; i < btns.length; i++) {
   this.className += " active";
   });
 }
+
+
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+
+
+
 </script>
 </body>	
 	
