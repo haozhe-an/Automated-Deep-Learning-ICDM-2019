@@ -10,7 +10,7 @@
 		<style type="text/css">
 		
 			body{
-				margin:10;
+				margin:50;
 				padding:0;
 				font-family: Sans-Serif;
 				line-height: 1.5em;
@@ -22,7 +22,6 @@
 				float: left;
 				width: 100%;
 			}
-
 			
 			.innertube{
 				margin: 15px; /* Padding for content */
@@ -30,6 +29,8 @@
 			}
 			
 			p {
+			    margin-left: 8em;
+                margin-right: 8em;
 				color: #555;
 			}
 	
@@ -66,22 +67,90 @@
 	</head>
 	
 	
-
+<STYLE>A {text-decoration: none;} </STYLE>
 <body>
 	<div class='container'>
-    		<a href='#'>
     			<img class='resize_fit_center'
-      			src= "img/baidu_research_logo_rgb.png" />
-    		</a>
+    			width="400" 
+      			src="https://www.aistats.org/aistats2016/image/baidu_research_logo_rgb.png" style="margin:20px 20px"/>
 	</div>
-	<ul>
-	  <li><a class="active" href="#">Home</a></li>
-	  <li><a href="#outline">Outline</a></li>
-	  <li><a href="#tutors">Tutors</a></li>
-	  <li><a href="#references">References</a></li>
-	  <li><a href="#github">Github</a></li>
-	</ul>
 
+	<div id='navbar'> 
+	    
+    	<ul>
+    	  <li><a class="link active" href="#">Welcome</a></li>
+    	  <li><a class="link" href="#rationale">Rationale</a></li>
+    	  <li><a class="link"  href="#outline">Outline</a></li>
+    	  <li><a class="link"  href="#tutors">Tutors</a></li>
+    	  <li><a class="link"  href="#references">References</a></li>
+    	  <li><a class="link"  href="#github">Github</a></li>
+    	</ul>
+	</div>
+	
+	<h1 style="font-family:sans-serif;margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;">Automated Deep Learning: Theory, Algorithms, Platforms, and Applications</h1>
+	<hr>
+	<div class='container'>
+    		    <h1 style="font-family:sans-serif;color:#E00601;margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;"><a href="#">Welcome</a></h1>
+	            <p>
+	                The rapidly increasing use of machine learning, data mining, and data analytics techniques across a broad range of applications provides opportunities for automated model construction, sharing and reuse of models, algorithms, and code, to help increase speed to solution and reduce duplication of effort. Although this is true for a wide range of machine learning tasks, automated model construction is of particular importance to deep learning for a number of reasons. Examples of such reasons include that<br> <br> 
+	                
+	                    (1) deep learning models have many hyperparameters that need to be tuned, <br>
+	                    
+	                    (2) deep learning models take long time to train and  <br>
+	                    
+	                    (3) there is only a handful widely used deep learning architectures. 
+	                    
+	                    <br><br>
+	                    In this tutorial we plan to focus on timely topics such as neural architecture search, transfer learning and meta learning, and deep learning model compressions. The tutorial will include a comprehensive survey of state-of-the-art algorithms and systems, a detailed description of the presenters’ research experience, and live-demonstration of platforms built by the Baidu AutoDL team. 
+	                    
+	                    <br><br>
+	                    No prerequisites are required for the tutorial. General knowledge of supervised learning and deep learning is assumed. 
+	    
+	            </p>
+    		
+	</div>
+	
+
+	<div class='container'>
+    		
+	            
+	                <h1 style="font-family:sans-serif;color:#E00601;margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;"><a href="#Rationale">Rationale</a></h1>
+  <p>
+	                Big Data, Deep Learning, and huge computing are shaping up AI and are transforming our society. In areas such as game playing, image classification, and speech recognition, AI algorithms may have already surpassed human experts’ capability.  For cognition tasks such as Q&A and text generation, AI delivers capability that is comparable to human intelligence. We are also observing transformations AI produces to industry sectors such as social media, finance, and transportation.<br><br>
+
+                    Automated Deep Learning model construction becomes a critical research problem in current AI research and development. At the core of the problem is to study the design space of deep learning, gaining insights on how deep learning works and why it may fail to deliver desired results. <br><br>
+
+                    The research of automated deep learning should at least include three key components: <br><br>
+
+                    (1) neural architecture search <br>
+                    (2) model construction with a changing environment such as transfer learning or meta learning and <br>
+                    (3) the adaptation of models/architectures to a different computing environment such as mobile computing environment. The proposed tutorial is hence organized around the three directions. 
+
+	            </p>
+    		
+	</div>
+	
+	<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("navbar");
+var btns = header.getElementsByClassName("link");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
 </body>	
 	
 	
