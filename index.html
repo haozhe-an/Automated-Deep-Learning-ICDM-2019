@@ -55,6 +55,7 @@
 			}
 			li {
 			  float: left;
+			  overflow: hidden;
 			}
 			li a {
 			  display: block;
@@ -76,6 +77,21 @@
                 margin-right: auto;
                 
             }
+            
+            
+            /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+            .sticky {
+              position: fixed;
+              top: 0;
+              width: 100%;
+            }
+            
+            /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+            .sticky + .content {
+              padding-top: 60px;
+            }
+
+            
 	
 		</style>
 			
@@ -85,6 +101,29 @@
 	
 <STYLE>A {text-decoration: none;} </STYLE>
 <body>
+    
+    <script>
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() {myFunction()};
+        
+        // Get the navbar
+        var navbar = document.getElementById("navbar");
+        
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+        
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+
+    </script>
+    
+    
     <a href="http://research.baidu.com/">
 	<div class='container'>
     			<img class='resize_fit_center'
@@ -100,10 +139,10 @@
     	  <li><a class="link"  href="#outline">Outline</a></li>
     	  <li><a class="link"  href="#tutors">Tutors</a></li>
 
-    	  <li><a class="link"  href="#github">Github</a></li>
+    	  <li><a class="link"  href="#github">GitHub</a></li>
+    	  <li><a class="link" href="#info">Tutorial Info</a></li>
+    	  <li><a class="link" href="#contact">Contact</a></li>
     	  
-    	  <li style="float:right"><a class="link" href="#contct">Contact</a></li>
-    	  <li style="float:right"><a class="link" href="#info">Tutorial Info</a></li>
     	</ul>
 	</div>
 	
@@ -330,10 +369,53 @@ Dr. Huan service record includes serving as a program co-chair for IEEE BIBM in 
 	 </div>
     		
 	</div>
+	
+	<div class='container'>
+    		
+	            <a name="github">
+	                <h1 style="font-family:sans-serif;color:#E00601;margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;">GitHub</h1></a>
+  <p>
+	     We will distribute the tutorial materials through the <a href="https://github.com/PaddlePaddle/AutoDL"> AutoDL GitHub </a> [Link: https://github.com/PaddlePaddle/AutoDL].
+
+	            </p>
+    		
+	</div>
 
 	
+		<div class='container'>
+    		
+	            <a name="info">
+	                <h1 style="font-family:sans-serif;color:#E00601;margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;">Tutorial Info</h1></a>
+  <p>Our tutorial will be held in ICDM 2019:</p>
+                <p>
+	               19th IEEE International Conference on Data Mining<br>
+        Beijing, China, 8-11 November 2019<br>
+        <a href = "icdm2019.bigke.org"> icdm2019.bigke.org</a>
+
+	            </p>
+    		
+	</div>
 	
 	
+		<div class='container'>
+    		
+	            <a name="contact">
+	                <h1 style="font-family:sans-serif;color:#E00601;margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;">Contact</h1></a>
+  <p>
+	               
+
+	            </p>
+    		
+	</div>
 	
 	<script>
 // Add active class to the current button (highlight it)
